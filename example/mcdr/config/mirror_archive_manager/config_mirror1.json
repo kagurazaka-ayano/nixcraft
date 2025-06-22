@@ -1,0 +1,18 @@
+{
+  "main": false,
+  "mirrors": [
+    {
+      "name": "mirror",
+      "pb_archive_id": 0,
+      "host": "127.0.0.1",
+      "port": 25576
+    }
+  ],
+  "main_path": "../tita-survival",
+  "port": 25576,
+  "perms": {
+    "start": 3,
+    "stop": 3,
+    "sync": 3
+  }
+}

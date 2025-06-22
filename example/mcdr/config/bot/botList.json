@@ -1,0 +1,88 @@
+{
+    "botList": [
+        {
+            "name": "bot_raidtower",
+            "location": {
+                "position": [
+                    -1333.4904642846727,
+                    202.125,
+                    122.57259487211576
+                ],
+                "facing": [
+                    2.562068,
+                    -3.4871106
+                ],
+                "dimension": 0
+            },
+            "comment": "",
+            "actions": [],
+            "tags": [],
+            "autoLogin": false,
+            "autoRunActions": false,
+            "autoUpdate": false
+        },
+        {
+            "name": "bot_mobtower",
+            "location": {
+                "position": [
+                    -1333.6509602438928,
+                    202.1875,
+                    118.4799043384219
+                ],
+                "facing": [
+                    -8.248334,
+                    1.5173686
+                ],
+                "dimension": 0
+            },
+            "comment": "",
+            "actions": [],
+            "tags": [],
+            "autoLogin": false,
+            "autoRunActions": false,
+            "autoUpdate": false
+        },
+        {
+            "name": "bot_slime",
+            "location": {
+                "position": [
+                    442.5,
+                    69.0,
+                    -99.5
+                ],
+                "facing": [
+                    0.0,
+                    0.0
+                ],
+                "dimension": 0
+            },
+            "comment": "",
+            "actions": [],
+            "tags": [],
+            "autoLogin": false,
+            "autoRunActions": false,
+            "autoUpdate": false
+        },
+        {
+            "name": "bot_shulker",
+            "location": {
+                "position": [
+                    -1459.300000011921,
+                    147.1875,
+                    979.3000000119209
+                ],
+                "facing": [
+                    14.102905,
+                    85.19982
+                ],
+                "dimension": 1
+            },
+            "comment": "",
+            "actions": [],
+            "tags": [],
+            "autoLogin": false,
+            "autoRunActions": false,
+            "autoUpdate": false
+        }
+    ]
+}
