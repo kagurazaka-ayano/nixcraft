@@ -31,11 +31,10 @@ in {
         root = "server";
         package = mcdr;
         extra_packages = [ ];
-        plugins = import ./configs/tita/mcdr/plugins.nix;
-        confs = (import ./configs/tita/mcdr/configs.nix) ++ [{
+        plugins = import ./mcdr/plugins.nix;
+        confs = (import ./mcdr/configs.nix) ++ [{
           name = "config.json";
-          path =
-            ./configs/tita/mcdr/config/mirror_archive_manager/config_main.json;
+          path = ./mcdr/config/mirror_archive_manager/config_main.json;
           dir = "config/mirror_archive_manager";
         }];
         start_cmd = "${mcdr}/bin/mcdreforged start";
@@ -43,10 +42,10 @@ in {
       };
       mod_list = [ ];
       mod_dir = "mods";
-      plugin_list = import ./configs/tita/plugins.nix;
-      conf_list = (import ./configs/tita/configs.nix) ++ [{
+      plugin_list = import ./plugins.nix;
+      conf_list = (import ./configs.nix) ++ [{
         name = "server.properties";
-        path = ./configs/tita/configs/server_survival.properties;
+        path = ./configs/server_survival.properties;
         dir = ".";
       }];
       plugin_dir = "plugins";
@@ -60,11 +59,10 @@ in {
         root = "server";
         package = mcdr;
         extra_packages = [ ];
-        plugins = import ./configs/tita/mcdr/plugins.nix;
-        confs = (import ./configs/tita/mcdr/configs.nix) ++ [{
+        plugins = import ./mcdr/plugins.nix;
+        confs = (import ./mcdr/configs.nix) ++ [{
           name = "config.json";
-          path =
-            ./configs/tita/mcdr/config/mirror_archive_manager/config_mirror1.json;
+          path = ./mcdr/config/mirror_archive_manager/config_mirror1.json;
           dir = "config/mirror_archive_manager";
         }];
         start_cmd = "${mcdr}/bin/mcdreforged start";
@@ -72,15 +70,15 @@ in {
       };
       mod_list = [ ];
       mod_dir = "mods";
-      plugin_list = (import ./configs/tita/plugins.nix) ++ [{
+      plugin_list = (import ./plugins.nix) ++ [{
         name = "PaperAxiom";
         url =
           "https://cdn.modrinth.com/data/evkiwA7V/versions/DKSjm6Az/AxiomPaper-4.0.5-for-MC1.20.1.jar";
         hash = "sha256-C1YKINzFjZCc8sSRTUYCpmGwgOi2OhtMlkCA7LvwZzc=";
       }];
-      conf_list = (import ./configs/tita/configs.nix) ++ [{
+      conf_list = (import ./configs.nix) ++ [{
         name = "server.properties";
-        path = ./configs/tita/configs/server_creative.properties;
+        path = ./configs/server_creative.properties;
         dir = ".";
       }];
       plugin_dir = "plugins";
