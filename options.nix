@@ -98,7 +98,6 @@
     merge = types.mergeEqualOption;
   };
 
-  # 这是你更新后的 Server 类型，包含了断言和默认值
   Server = mkOptionType {
     name = "server";
     description = "A server instance";
@@ -174,7 +173,7 @@
     });
   };
 in {
-  services.mcservers = mkOption {
+  services.mcservers = {
     type = types.attrsOf Server;
     default = {};
     example = lib.literalExpression ''
