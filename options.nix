@@ -174,32 +174,39 @@
   };
 in {
   services.mcservers = {
-    type = types.attrsOf Server;
-    default = {};
-    example = lib.literalExpression ''
-      {
-        survival = {
-          name = "survival";
-          jdk = pkgs.jdk17;
-          kernel = {
-            name = "server.jar";
-            dest = ".";
-            url = "https://piston-data.mojang.com/v1/objects/some-hash/server.jar";
-            hash = "sha256-...";
-          };
-          launch = "java -jar server.jar";
-          stop = "stop";
-          mod_list = [
-            {
-              name = "fabric-api.jar";
-              dest = "mods";
-              url = "https://example.com/fabric.jar";
-              hash = "sha256-...";
-            }
-          ];
-        };
-      }
-    '';
-    description = "Declarative Minecraft (or other) server instances.";
+    enable = mkOption {
+      type = types.bool;
+      default = false;
+      description = "Whether to enable the declarative mcservers module.";
+    };
+
+    dataDir = mkOption {
+      type = types.str;
+      default = "/var/lib/mcservers";
+      description = "The root directory for all server instance data.";
+    };
+
+    user = mkOption {
+      type = types.str;
+      default = "mcserver";
+      description = "Default user to run server instances as.";
+    };
+
+    group = mkOption {
+      type = types.str;
+      default = "mcserver";
+      description = "Default group to run server instances as.";
+    };
+
+    servers = mkOption {
+      type = types.attrsOf Server;
+      default = {};
+      example = {
+        /*
+        ...
+        */
+      };
+      description = "Declarative Minecraft (or other) server instances.";
+    };
   };
 }
